@@ -293,7 +293,7 @@ def deallocate(request):
                 if students[i].room is not None:
                     old_room = Room.objects.get(room_no = students[i].room.room_no)
                     old_room.vacancy = old_room.capacity
-                    print students[i], old_room
+                    print students[i],old_room
                     old_room.save()
                     students[i].room = None
                     students[i].save()
